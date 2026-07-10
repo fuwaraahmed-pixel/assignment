@@ -153,7 +153,7 @@ nav ul li a {
 
 .pricing .subtitle {
     font-size: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     color: black;
 }
 
@@ -165,6 +165,7 @@ nav ul li a {
 }
 
 /* Standard and Team card style */
+
 .pricing-grid article.card {
     background-color: #ffffff;
     border: 1px solid #e5e7eb;
@@ -184,26 +185,75 @@ nav ul li a {
     font-size: 12px;
     color: #9ca3af;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 0 0 5px 0;
+    line-height: 1.2;
 }
 
 .card .price {
     font-size: 48px;
     font-weight: 800;
     color: #0b132a;
-    margin-bottom: 5px;
+    margin: 0;
+    line-height: 1.1;
 }
 
 .price-description {
     font-size: 14px;
     color: #9ca3af;
-    margin-bottom: 20px;
+    margin: 4px 0 15px 0;
+    line-height: 1.2;
 }
 
-ul {
 
-    margin-bottom: 30px;
-    line-height: 1.8;
+.pricing-grid article.card ul {
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.pricing-grid article.card ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #4b5563;
+}
+
+
+.pricing-grid article.card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: #9ca3af;
+    font-size: 20px;
+}
+
+.pricing-grid .card:nth-child(2) {
+    border-color: #030627;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    background-color: #020222e3;
+    color: #fff;
+}
+
+.pricing-grid .card:nth-child(2) .price {
+    color: #ffffff;
+
+}
+
+.pricing-grid .card:nth-child(2) .price-description {
+    color: #9ca3af;
+}
+
+.pricing-grid .card:nth-child(2) ul li {
+    color: #e5e7eb;
+}
+
+.pricing-grid .card:nth-child(2) ul li::before {
+    color: #9ca3af;
 }
 
 .btn-standard,
@@ -221,26 +271,24 @@ ul {
     margin-top: 10px;
 }
 
-/* Pro card highlighted */
-.pricing-grid .card:nth-child(2) {
-    transform: translateY(-20px);
-    border-color: #0b132a;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    position: relative;
-    background-color: #0e112bd8;
-    color: #fff;
+.pricing-grid article.card hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 15px 0;
+}
+
+.pricing-grid .card:nth-child(2) hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pricing-grid .card:nth-child(2) .card-tag {
-    background-color: #0b132a;
-    color: #fff;
-    width: max-content;
-    padding: 5px 10px;
-    border-radius: 4px;
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
+    color: #38bdf8;
+    background-color: transparent;
+    padding: 0;
+    position: static;
+    transform: none;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .btn-standard {
@@ -265,10 +313,7 @@ ul {
     transform: translateY(-8px);
 }
 
-/* Hover effect for pro card */
-.pricing-grid .card:nth-child(2):hover {
-    transform: translateY(-25px);
-}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -279,4 +324,142 @@ ul {
     .pricing-grid .card:nth-child(2) {
         transform: none;
     }
+}
+
+/* FAQ section */
+.faq {
+    padding: 80px 0;
+    background-color: #d7e1eccb;
+    /* Light background */
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #0b132a;
+}
+
+.faq .subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #6b7280;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 18px 24px;
+    transition: all 0.3s ease;
+}
+
+.faq-item[open] {
+    border-color: rgb(241, 113, 8);
+    box-shadow: 0 4px 12px rgba(241, 113, 8, 0.05);
+}
+
+.faq-question {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b132a;
+    cursor: pointer;
+    list-style: none;
+    /* Hide default arrow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide webkit default details marker */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom indicator icon */
+.faq-question::after {
+    content: "+";
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(241, 113, 8);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-question::after {
+    content: "−";
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* footer section */
+
+footer {
+    background-color: #0b132a;
+    color: #fff;
+    padding: 40px 0;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    height: 30px;
+    width: auto;
+}
+
+
+.footer-right {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-right a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.footer-right .social-link img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+.footer-right a:hover {
+    transform: scale(1.15);
+}
+
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
 }
