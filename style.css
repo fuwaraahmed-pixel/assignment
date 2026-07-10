@@ -8,7 +8,7 @@
 
 /* nav section  */
 
-nav{
+nav {
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -19,7 +19,7 @@ nav{
 
 .logo img {
     height: 34px;
-    width: auto; 
+    width: auto;
 }
 
 .menu ul {
@@ -28,61 +28,68 @@ nav{
     margin-right: 20px;
     gap: 30px;
 }
- nav ul li a {
+
+nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 20px;
- }
- .common-btn{
+}
+
+.common-btn {
     background-color: rgb(241, 113, 8);
     color: #fff;
     padding: 20px 30px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 18px;
- }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-.hero { 
-    position: relative; 
-    min-height:100vh; 
-    background:url("./assets/banner.jpg") 
-    center/cover no-repeat; 
-    display:flex; 
-    align-items:center; 
-    justify-content:center; 
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: url("./assets/banner.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.hero::before { 
-    content:""; 
-    position:absolute; 
-    inset:0; background: rgba(0, 0, 0, 0.55); 
-    z-index:1; 
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
 }
-.hero-content { 
-    position:relative; 
-    z-index:2; 
-    color:#fff;
-    text-align:center; 
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
 
-.hero-content h1 { 
-    font-size: 60px; 
-    margin-bottom: 20px; 
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
 }
-.hero-content p { 
+
+.hero-content p {
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.5;
     justify-content: center;
-    font-size: 20px; 
-    margin-bottom: 300px; 
+    font-size: 20px;
+    margin-bottom: 300px;
 }
 
 /* speakers section */
@@ -92,23 +99,27 @@ nav{
     background-color: #f5f5f5;
     text-align: center;
 }
+
 .speakers h2 {
     font-size: 36px;
     margin-bottom: 50px;
 }
-.speaker-track{
+
+.speaker-track {
     color: #f1670b;
     font-weight: bold;
     font-size: 14px;
 
 }
+
 .speakers-grid {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    
+
 }
+
 .speaker-card {
     background-color: #fff;
     max-width: 100%;
@@ -118,7 +129,7 @@ nav{
     text-align: left;
     line-height: 1.5;
     transition: transform 0.3s ease;
-    border : solid 1px #ddd;
+    border: solid 1px #ddd;
 }
 
 .speaker-card img {
@@ -126,6 +137,146 @@ nav{
     border-radius: 10px;
 }
 
+/* pricing section */
 
+.pricing {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
 
+.pricing h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: black;
+}
 
+.pricing .subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Standard and Team card style */
+.pricing-grid article.card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-grid article {
+    padding: 20px;
+    line-height: 2;
+    transition: transform 0.3s ease;
+}
+
+.card-tag {
+    font-size: 12px;
+    color: #9ca3af;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .price {
+    font-size: 48px;
+    font-weight: 800;
+    color: #0b132a;
+    margin-bottom: 5px;
+}
+
+.price-description {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 20px;
+}
+
+ul {
+
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.btn-standard,
+.btn-pro,
+.btn-team {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border: none;
+    margin-top: 10px;
+}
+
+/* Pro card highlighted */
+.pricing-grid .card:nth-child(2) {
+    transform: translateY(-20px);
+    border-color: #0b132a;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    background-color: #0e112bd8;
+    color: #fff;
+}
+
+.pricing-grid .card:nth-child(2) .card-tag {
+    background-color: #0b132a;
+    color: #fff;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-standard {
+    background-color: #ebedf3;
+    color: #0b132a;
+    border: 1px solid #02050f;
+}
+
+.btn-pro {
+    background-color: #0b132a;
+    color: #fff;
+}
+
+.btn-team {
+    background-color: #ebedf3;
+    color: #0b132a;
+    border: 1px solid #02050f;
+}
+
+/* Hover effect for all cards */
+.pricing-grid article:hover {
+    transform: translateY(-8px);
+}
+
+/* Hover effect for pro card */
+.pricing-grid .card:nth-child(2):hover {
+    transform: translateY(-25px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid .card:nth-child(2) {
+        transform: none;
+    }
+}
