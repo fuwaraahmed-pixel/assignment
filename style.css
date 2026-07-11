@@ -297,24 +297,6 @@ nav ul li a {
     border: 1px solid #02050f;
 }
 
-/* Hover effect for all cards */
-.pricing-grid article:hover {
-    transform: translateY(-8px);
-}
-
-
-
-/* Responsive */
-@media (max-width: 768px) {
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-grid .card:nth-child(2) {
-        transform: none;
-    }
-}
-
 /* FAQ section */
 .faq {
     padding: 80px 0;
