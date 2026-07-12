@@ -430,7 +430,15 @@ footer {
 }
 
 .footer-bottom {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #9ca3af;
     font-size: 14px;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #e5e7ebc7;
+    margin: 0 20px;
 }
